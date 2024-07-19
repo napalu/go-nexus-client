@@ -18,6 +18,9 @@ type HostedStorage struct {
 
 	// WritePolicy controls if deployments of and updates to assets are allowed
 	WritePolicy *StorageWritePolicy `json:"writePolicy,omitempty"`
+
+	// Allow redeploying 'latest' tag defer to WritePolicy otherwise
+	LatestPolicy *bool `json:"latestPolicy,omitempty"`
 }
 
 // Storage contains repository storage
